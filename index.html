@@ -5,6 +5,11 @@
   <title>Linda Gonzalez Resume</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="/app.css">
+
   <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
 <link href="/assets/sunburst.css?body=1" media="all" rel="stylesheet" type="text/css" />
 <link href="/assets/pure/buttons-core.css?body=1" media="all" rel="stylesheet" type="text/css" />
@@ -36,13 +41,859 @@
 <script src="/assets/photoswipe/index.js?body=1" type="text/javascript"></script>
 <script src="/assets/photoswipe-gallery.js?body=1" type="text/javascript"></script>
 <script src="/assets/lg.js?body=1" type="text/javascript"></script>
-<script src="/assets/modernizr.js?body=1" type="text/javascript"></script>
 <script src="/assets/application.js?body=1" type="text/javascript"></script>
 
   <meta content="authenticity_token" name="csrf-param" />
-<meta content="lqgVmpGENZsCCthbA13eOmC9bvbvNLjneEuxeY2G+9o=" name="csrf-token" />
 
-  <link href="/favicon.ico?1" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link href="favicon.ico?1" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+  <style>
+    body {
+      background-color: #f5f4e8;
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1   {color: blue;}
+    p    {color: red;}
+    .content {
+        margin: 0 auto;
+        width: 70%;
+        margin-bottom: 50px;
+    }
+
+    .nav-bar {
+        margin-bottom: 50px;
+        box-sizing: border-box;
+        float: left;
+        list-style-type: none;
+        padding-left: 0;
+        width: 100%;
+        box-shadow: inset 0px 2px 75px #BFC8D6, 0px 5px 10px rgba(50, 50, 50, 0.5);
+    }
+
+    .nav-bar--menu {
+      display: inline-block;
+      line-height: 50px;
+      text-align: center;
+      vertical-align: middle;
+      width: 25%;
+    }
+
+    .nav-bar__menu-link {
+      background: inherit;
+      color: rgba(255, 255, 255, 0.75);
+      float: left;
+      line-height: 50px;
+      margin: 0;
+      text-align: center;
+      width: 100%;
+  }
+
+    .hero {
+      text-align: center;
+      margin: 72px 0 3em;
+    }
+    .hero h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 600%;
+    margin: 0;
+    padding: 0;
+    color: #1f8dd6;
+    font-weight: 100;
+  }
+
+  /* --------------------------
+ * Variables
+ * --------------------------
+*/
+
+$nav-item-width: 25%;
+$orange: rgb(243, 123, 29);
+$footer-height: 100px;
+$made-by-offset: -35px;
+
+/* --------------------------
+ * Mix-ins
+ * --------------------------
+*/
+
+@mixin bottom-margin {
+  margin-bottom: 50px;
+}
+
+/* --------------------------
+ * Added Styles
+ * --------------------------
+*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #777777;
+}
+h3 {
+  color: #777777;
+}
+
+a, a:visited {
+  color: #42b8dd;
+}
+
+div#main.pure-u  {
+  background: rgb(245, 244, 232);
+  -moz-box-shadow: inset #DCD4D4 rgb(65, 134, 155);
+  -webkit-box-shadow: inset #DCD4D4 rgb(65, 134, 155);
+  box-shadow:inset #DCD4D4 rgb(65, 134, 155), 0px 10px 10px rgba(50, 50, 50, 0.75);;
+  position:relative;
+}
+
+#github {
+  @include bottom-margin;
+}
+
+.github-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 9.6em;
+}
+
+.experience {
+  padding: 0;
+}
+
+.l-box ul li {
+  margin: 5px;
+}
+
+/* --------------------------
+ * Nav bar
+ * --------------------------
+*/
+
+
+.nav-bar {
+  @include bottom-margin;
+  box-sizing: border-box;
+  float: left;
+  list-style-type: none;
+  padding-left: 0;
+  width: 100%;
+  box-shadow: inset 0px 2px 75px #BFC8D6,0px 5px 10px rgba(50,50,50,0.5);
+}
+
+.nav-bar:before, .nav-bar:after {
+  content: "";
+  display: table;
+}
+
+.nav-bar:after {
+  clear: both;
+}
+
+.nav-bar--menu {
+  display: inline-block;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  width: $nav-item-width;
+}
+
+.nav-bar__menu-link {
+  background: inherit;
+  color: rgba(255, 255, 255, 0.75);
+  float: left;
+  line-height: 50px;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.nav-bar__menu-link:hover {
+  color: white;
+}
+
+.blue {
+  background: #0e90d2;
+}
+
+.purple {
+  background: rgb(128, 88, 165);
+}
+
+.green {
+  background: #5eb95e;
+}
+
+.red {
+  background: #dd514c;
+}
+
+.orange {
+  background: #f37b1d;
+}
+
+
+a, a:visited {
+    color: #42b8dd;
+}
+.yellow {
+  background: rgb(250, 210, 50);
+}
+
+.bottom-decoration-container {
+  background: red;
+  bottom: 0px;
+  position: absolute;
+  width: 100%
+}
+
+.bottom-decoration {
+  display: block;
+  height: 2px;
+  width: 100%;
+}
+
+.see-more-button {
+  color: rgb(66, 184, 221); 
+  background: transparent;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 1px solid rgb(66, 184, 221);
+}
+
+.figure:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 870px) {
+  .nav-bar {
+    height: auto;
+    display: block;
+  }
+
+  .nav-bar--menu {
+    display: block;
+    float: left;
+    width: 50%;
+  }
+
+  .nav-bar ul {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .nav-bar__menu-link {
+    width: 100%;
+    float: left;
+  }
+}
+
+@media only screen and (max-width : 480px) {
+  .nav-bar {
+    border-bottom: 0;
+    display: block;
+  }
+
+  .nav-bar--menu {
+    width: 100%;
+
+  }
+
+  .nav-bar__menu-link {
+    width: inherit;
+
+  }
+
+}
+
+/* Add transition to containers so they can push in and out */
+#layout, #menu, .pure-menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+/* --------------------------
+ * Element Styles
+ * --------------------------
+*/
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
+    color: rgb(75, 75, 75);
+}
+
+a {
+  text-decoration: none;
+}
+
+// a:visited {
+//     color: #999 // #265778; /* block-normal-text-normal */
+// }
+
+.back-to-top {
+  text-align: right;
+}
+
+a.scroll-up {
+  background: inherit;
+  border:  1px solid #ddd;
+  border-radius:  .25em;
+  color: #999;
+  padding: .25em .5em;
+  &:hover,  {
+    background: #0078E7;
+    color: #fff;
+    transition: .25s;
+  }
+
+
+}
+
+dt {
+    font-weight: bold;
+}
+dd {
+    margin: 0 0 10px 0;
+}
+
+/* --------------------------
+ * Layout Styles
+ * --------------------------
+*/
+
+#layout {
+  padding-left: 150px; /* left col width "#menu" */
+  left: 0;
+}
+
+#main {
+  margin-bottom: $footer-height;
+  width: 100%;
+}
+
+/* Apply the .box class on the immediate parent of any grid element (pure-u-*) to apply some padding. */
+.l-box {
+    padding: 1.3em;
+}
+
+.l-vbox {
+    padding: 1.3em 0;
+}
+
+.l-hbox {
+    padding: 0 1.3em;
+}
+
+.l-centered {
+    text-align: center;
+}
+
+
+/* --------------------------
+ * Header Module Styles
+ * --------------------------
+*/
+.header {
+     min-height: 80px;
+     margin: 0;
+     color: #333;
+     padding: 1em;
+     text-align: center;
+     border-bottom: 1px solid #DCD4D4;
+/*     background: #fff;
+*/}
+    .header h1 {
+        margin: 0.2em 0;
+        font-size: 3em;
+        font-weight: 300;
+    }
+     .header h2 {
+         font-weight: 300;
+         margin: 0;
+         color: #ccc;
+     }
+
+aside {
+    background: #cce1ef; /* normal color palette when primary color palette is at #1f8dd6 */
+    padding: 0.3em 1em;
+    border-radius: 3px;
+    color: #163246; /* block-normal-text-high */
+}
+    .aside a, .aside a:visited {
+        color: #1f8dd6;
+    }
+
+ /* --------------------------
+  * Content Module Styles
+  * --------------------------
+ */
+
+/* The content div is placed as a wrapper around all the docs */
+.content {
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom:50px;
+}
+    .content p {
+        line-height: 1.6em;
+        font-size: 115%;
+    }
+
+    .content .content-subhead {
+        margin: 50px 0 20px 0;
+        font-weight: 300;
+        color: #888;
+    }
+
+    .content .content-spaced {
+        line-height: 1.8em;
+    }
+
+    /* A code snippet that has been syntax highlighted */
+    .content .snippet {
+        margin: 0;
+        padding: 1.3em;
+    }
+
+    .content .content-quote {
+        font-family: "Georgia", serif;
+        color: #666;
+        font-style: italic;
+        line-height: 1.8em;
+        border-left: 5px solid #ddd;
+        padding-left: 1.5em;
+    }
+
+
+
+/* --------------------------
+ * Footer Module Styles
+ * --------------------------
+*/
+.legal {
+    font-size: 80%;
+    border-top: 1px solid #eee;
+    padding: 0.5em 0;
+    background: rgb(250, 250, 250);
+}
+
+    .legal-license, .legal-copyright {
+        margin: 0;
+    }
+
+    .legal-links {
+        text-align: right;
+    }
+
+    .legal-copyright {
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .legal-links {
+        list-style: none;
+        margin: 0;
+    }
+
+    .legal-logo {
+        text-align: center;
+    }
+
+/* --------------------------
+ * Main Navigation Bar Styles
+ * --------------------------
+*/
+
+#menu {
+    margin-left: -150px; /* "#menu" width */
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 150px;
+    bottom: 0;
+    z-index: 1000; /* so the menu or its navicon stays above all content */
+    background: #191818;
+    overflow-y: auto;
+    -webkit-overflow-scroll: touch;
+}
+    #menu a {
+        color: #999;
+        border: none;
+        white-space: normal;
+        padding: 0.6em 0 0.6em 0.6em;
+    }
+
+    #menu .pure-menu-open {
+        background: transparent;
+        border: 0;
+    }
+
+    #menu .pure-menu ul {
+        border: none;
+        background: transparent;
+    }
+
+    #menu .pure-menu ul,
+    #menu .pure-menu .menu-item-divided {
+        border-top: 1px solid #333;
+    }
+
+        #menu .pure-menu li a:hover {
+            background: #333;
+        }
+
+    .pure-menu-link {
+        display: none; /* show this only on small screens */
+        top: 0;
+        left: 150px; /* "#menu width" */
+        background: #000;
+        background: rgba(0,0,0,0.7);
+        padding: 0.75em 1em;
+    }
+
+        .pure-menu-link:hover {
+            background: #000;
+        }
+
+    #menu .pure-menu-heading {
+        font-size:110%;
+        color: #fff;
+    }
+
+    #menu .pure-menu-selected {
+        background: #1f8dd6;
+    }
+
+        #menu .pure-menu-selected a {
+            color: white;
+        }
+
+        #menu li.pure-menu-selected a:hover {
+            background: none;
+        }
+
+
+.clearfix:before, :clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+
+/* ---------------------
+ * Smaller Module Styles
+ * ---------------------
+*/
+
+/* example code blocks */
+.example-snippet {
+    margin: 2em 0;
+    font-size: 85%;
+}
+
+/* green call to action button class */
+.notice {
+    background-color: #61B842;
+    color: white;
+}
+
+.pure-button {
+    font-family: inherit;
+    color: auto;
+}
+
+.muted {
+    color: #ccc;
+}
+
+/* --------------------------
+ * Responsive Styles
+ * --------------------------
+*/
+
+@media (max-width: 870px) {
+
+    /* Navigation Push Styles */
+    #layout {
+        position: relative;
+        padding-left: 0;
+    }
+        #layout.active {
+            position: relative;
+            left: 150px;
+        }
+
+            #layout.active #menu nav {
+                left: 150px;
+                width: 150px;
+            }
+
+    .pure-menu-link {
+        position: fixed;
+        left: 0;
+        display: block;
+    }
+
+    #layout.active .pure-menu-link {
+        left: 150px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .content {
+      width: 95%;
+      font-size: 90%;
+    }
+
+    .legal-links {
+      padding:1em 0;
+    }
+    .legal-license, .legal-copyright, .legal-links, .legal-links li {
+      text-align: center;
+    }
+
+    /* normalize paddings on small screens*/
+    .l-hbox {
+      padding: 1.3em;
+    }
+
+}
+
+p {
+    line-height: 1.6em;
+}
+
+.hero {
+    text-align: center;
+    margin: 72px 0 3em;
+}
+    .hero h1 {
+        font-family: 'Lobster', cursive;
+        font-size: 600%;
+        margin: 0;
+        padding: 0;
+        color: #1f8dd6;
+        font-weight: 100;
+    }
+    .hero h2 {
+        font-weight: 100;
+        font-size: 24px;
+        margin: 0.02em 0 0.8em;
+        color: #666;
+    }
+
+.hero-cta pre {
+    font-size: 100%;
+}
+
+a.pure-button-cta {
+    font-size: 120%;
+    background: #FCB94C;
+    color: white;
+    font-weight: bold;
+}
+
+.size-chart {
+    width: 100%;
+}
+
+    .size-chart-item {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .size-chart-base {
+        background: #0e90d2;
+    }
+        .size-chart-base span {
+            color: rgb(103, 194, 240);
+        }
+
+    .size-chart-grids {
+        background: rgb(128, 88, 165);
+    }
+        .size-chart-grids span {
+            color: rgb(200, 131, 255);
+        }
+    .size-chart-forms {
+        background: #5eb95e;
+    }
+
+        .size-chart-forms span {
+            color: rgb(161, 240, 137);
+        }
+
+    .size-chart-buttons {
+        background: #dd514c;
+    }
+
+        .size-chart-buttons span {
+            color: rgb(236, 164, 154);
+        }
+
+    .size-chart-menus {
+        background: rgb(250, 210, 50);
+    }
+        .size-chart-menus span {
+            color: rgb(255, 240, 134);
+        }
+    .size-chart-tables {
+        background: rgb(243, 123, 29);
+    }
+        .size-chart-tables span {
+            color: rgb(255, 190, 129);
+        }
+
+    a.size-chart-label {
+        display: block;
+        color: #fff;
+        height: 40px;
+        padding: 0.5em;
+        text-decoration: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .size-chart-size {
+        display: block;
+    }
+
+.marketing-ribbon {
+    // border-bottom: 1px solid #eee;
+    padding: 1em 0;
+}
+
+    .marketing-ribbon h3 {
+        font-size: 1.47em;
+        font-weight: normal;
+    }
+
+@media (max-width: 767px) {
+    .hero {
+        margin: 2em 0 1.5em;
+        padding: 0.6em;
+    }
+        .hero h1 {
+            font-size: 250%;
+            font-weight: 300; /* slightly thicker to compensate for font-size */
+        }
+        .hero h2 {
+            font-size: 20px;
+        }
+
+    /* by default l-hbox becomes padding: 1.3em; at <= 767px. However, this makes the heading
+    too far away from the content, so adding this in here. */
+    h3.l-hbox,
+    p.l-hbox {
+        padding: 0 1.3em;
+    }
+
+    a.size-chart-label {
+        font-size: 0.75em;
+        padding: 0.6667em;
+    }
+}
+
+/*
+ * Baby Blue theme for RainbowJS
+ *
+ * @author tilomitra
+ */
+
+pre {
+    word-wrap: break-word;
+    padding: 6px 10;
+    line-height: 1.3em;
+    margin-bottom: 20;
+    border: 1px solid #eee;
+}
+
+code {
+    border: none;
+    margin: 0 2px;
+    font-size: 0.8em;
+    padding: 0.4em 0.6em;
+}
+
+pre code {
+    padding: 0;
+    margin: 0;
+    font-size: 0.95em;
+}
+
+pre, code {
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    color: #333;
+    background: rgb(250, 250, 250);
+}
+
+
+pre .comment {
+    color: #999;
+}
+
+
+pre .tag, pre .tag-name, pre .support.tag-name {
+    color: rgb(85, 85, 85);
+}
+
+pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {
+    font-weight: bold;
+}
+
+pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {
+    color: #333;
+}
+
+pre .constant.numeric, pre .keyword.unit, pre .hex-color {
+    font-weight: normal;
+    color: #099;
+}
+
+pre .attribute, pre .variable, pre .support {
+    color:  #757575; /* skinbuilder block-page-text-normal with #1f8dd6 as primary */
+}
+
+pre .string, pre .support.value  {
+    font-weight: normal;
+    color: #3b8bba; /* skinbuilder block-mine-text-low with #1f8dd6 as primary */
+}
+
+.footer {
+  background: #666;
+  bottom: 0;
+  color: white;
+  height: $footer-height;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+
+.made-by {
+  width: 200px;
+  margin: auto;
+  position: relative;
+  bottom: $made-by-offset;
+  img {
+    display: block;
+    margin: auto;
+  }
+}
+</style>
+
 
 </head>
 <body>
@@ -54,6 +905,7 @@
     <div class="hero">
       <h1 class="pure-u-1">Linda Gonzalez</h1>
       <h2 class="pure-u-3-4 l-centered">Software Developer</h2>
+     
     </div>
   </div> <!-- /content -->
 
@@ -62,6 +914,31 @@
     <li class="nav-bar--menu"><a class="nav-bar__menu-link blue" href="#about">About Me</a></li><li class="nav-bar--menu"><a class="nav-bar__menu-link purple" href="#projects">Projects</a></li><li class="nav-bar--menu"><a class="nav-bar__menu-link green" href="#skills">Skills</a></li><li class="nav-bar--menu"><a class="nav-bar__menu-link orange" href="&#109;&#x61;&#105;&#108;&#116;&#111;&#58;&#x73;&#x61;&#121;&#x68;&#x65;&#108;&#x6c;&#111;&#x6c;&#x69;&#110;&#x64;&#97;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">Contact</a></li>
   </ul>
 </nav>
+  
+  <div class="content">
+    <div id="about">
+      <div class="header pure-u-1">
+        <h1 class="pure-u-1">About Me</h1>
+      </div><!-- /header -->
+
+     <p>
+          <div>Hi 👋 I'm Linda, a Software Developer. </div>
+          </br>
+          <div>I like to code both the front end and the backend. I care deeply about user experience, observability, accessability, agile methodologies, and naming things well.</div>
+  </br>
+          <div>I live in NYC and work for Venmo.</div>
+  </br>
+
+          <div>I've had the pleasure of working at other tech companies including Stride Consulting, 2U, Ladders, Vaunte and Streeteasy.</div>
+  </br>
+          <div>Sometimes I write tech articles.</div>
+  </br>
+          <div>In my free time I like to  🖥️ code, dance ballet 💃, take pilates, hike and travel. </div>
+  </br>
+          <div>Contact me at sayhellolinda@gmail.com</div>
+        </p>
+      </div>
+    </div>
 
   <div class="content">
 
@@ -868,7 +1745,7 @@
         <p class="legal-copyright">
           Made with ♥ by Linda
         </p>
-        <img src="assets/owls.svg" width="150px" height="75px" alt="Owls"/>
+        <img src="owls.svg" width="150px" height="75px" alt="Owls"/>
       </div>
   </div>
 
